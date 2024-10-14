@@ -70,7 +70,6 @@ module.exports = (sequelizeInstance, DataTypes)=>{
     
     User.prototype.comparePSW = async function(userPSW,options){ //you can't use arrow fucntions for prototype
         const compare = await bcrypt.compare(userPSW, this.password)
-        console.log(compare)
         return compare
     }
     
