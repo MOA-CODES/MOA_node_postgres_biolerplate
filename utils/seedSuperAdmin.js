@@ -14,6 +14,7 @@ const SuperAdmin = async ()=>{
     
             console.log("Seeded SuperAdmin")
         }
+        console.log("SuperAdmin Exists")
     }catch(e){
         console.log("error seeding SuperAdmin")
     }
