@@ -13,10 +13,13 @@ const seedSuperAdmin = require('./utils/seedSuperAdmin')
 
 const express = require('express')
 
+const morgan = require('morgan')
+
 const PORT = process.env.PORT
 
 const app = express()
 
+app.use(morgan('dev'))
 app.use(express.json())
 
 app.get('/', (req, res)=>{
