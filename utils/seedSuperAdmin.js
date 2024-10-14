@@ -6,7 +6,7 @@ const SuperAdmin = async ()=>{
     const SuperAdmin = {name:'SuperAdmin', email:'Super@Admin.com', role:'SuperAdmin', phone: '+234-0000000000', password:'admin@SUPER00'}
 
     try{
-        const checkAdmin = await db.User.findAll({where: {role:'Admin'}})
+        const checkAdmin = await db.User.findAll({where: {role:'SuperAdmin'}})
 
         if ((checkAdmin.length === 0)){    
 
