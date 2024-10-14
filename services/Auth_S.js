@@ -11,7 +11,7 @@ const register_S = async(data)=>{
 
         const user = await db.User.create(data)
 
-        const token = await user.createJWT()
+        const token = user.createJWT()
 
         return {data: {user,token}, code:StatusCodes.OK, message:"Register success"}
     }catch(e){
@@ -37,7 +37,7 @@ const login_S = async(data)=>{
         return {errormsg:"Invalid Credentials", code: StatusCodes.BAD_REQUEST}
        }
 
-       const token = await check.createJWT()
+       const token = check.createJWT()
 
        return {data:{user:check,token}, code:StatusCodes.OK, message:"Login success"}
     }catch(e){
